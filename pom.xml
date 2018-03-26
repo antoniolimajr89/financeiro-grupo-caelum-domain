@@ -18,9 +18,9 @@
 	</properties>
 
 	<scm>
-		<url>http://github.com/caelum/financeiro-grupo-caelum</url>
-		<connection>scm:git:git://github.com/caelum/financeiro-grupo-caelum</connection>
-		<developerConnection>scm:git:git@github.com:caelum/financeiro-grupo-caelum.git</developerConnection>
+		<url>http://github.com/caelum/financeiro-grupo-caelum-domain</url>
+		<connection>scm:git:git://github.com/caelum/financeiro-grupo-caelum-domain</connection>
+		<developerConnection>scm:git:git@github.com:caelum/financeiro-grupo-caelum-domain.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	
