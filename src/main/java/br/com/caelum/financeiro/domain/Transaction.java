@@ -7,6 +7,7 @@ import java.util.Objects;
 
 public class Transaction {
 	
+	private Long id;
 	private LocalDate date;
 	private Customer customer;
 	private List<Product> products;
@@ -19,7 +20,8 @@ public class Transaction {
 	private Transaction() {
 	}
 	
-	public Transaction(LocalDate date, Customer customer, List<Product> products, LocalDate accessDate, String paymentMethod, Integer numberOfInstallments, Boolean renewal) {
+	public Transaction(Long id, LocalDate date, Customer customer, List<Product> products, LocalDate accessDate, String paymentMethod, Integer numberOfInstallments, Boolean renewal) {
+		this.id = id;
 		this.date = date;
 		this.customer = customer;
 		this.products = products;
@@ -45,6 +47,10 @@ public class Transaction {
 	@Override
 	public String toString() {
 		return "Payment[Date: " +this.date+" Customer: " +this.customer +"]";
+	}
+	
+	public Long getId() {
+		return id;
 	}
 
 	public LocalDate getDate() {
