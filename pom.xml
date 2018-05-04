@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.caelum</groupId>
 	<artifactId>financeiro-domain</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<parent>
@@ -21,7 +21,7 @@
 		<url>http://github.com/caelum/financeiro-grupo-caelum-domain</url>
 		<connection>scm:git:git://github.com/caelum/financeiro-grupo-caelum-domain</connection>
 		<developerConnection>scm:git:git@github.com:caelum/financeiro-grupo-caelum-domain.git</developerConnection>
-		<tag>financeiro-domain-0.0.3</tag>
+		<tag>HEAD</tag>
 	</scm>
 	
 	<build>
