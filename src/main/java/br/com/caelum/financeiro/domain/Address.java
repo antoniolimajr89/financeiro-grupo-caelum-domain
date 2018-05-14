@@ -10,23 +10,26 @@ public class Address {
 	private String zipCode;
 	private String street;
 	private String number;
+	private String district;
+
 	
 	@SuppressWarnings("unused")
 	private Address() {
 	}
 	
-	public Address(String country, String state, String city, String zipCode, String street, String number) {
+	public Address(String country, String state, String city, String zipCode, String street, String number, String district) {
 		this.country = country;
 		this.state = state;
 		this.city = city;
 		this.zipCode = zipCode;
 		this.street = street;
 		this.number = number;
+		this.district = district;
 	}
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(country, state, city, zipCode, street, number);
+		return Objects.hash(country, state, city, zipCode, street, number, district);
 	}
 
 	@Override
@@ -36,12 +39,13 @@ public class Address {
 		Address other = (Address)obj;
 		return Objects.equals(country, other.country) && Objects.equals(state, other.state)
 				&& Objects.equals(city, other.city) && Objects.equals(zipCode, other.zipCode)
-				&& Objects.equals(street, other.street) && Objects.equals(number, other.number);
+				&& Objects.equals(street, other.street) && Objects.equals(number, other.number)
+				&& Objects.equals(district, other.district);
 	}
 
 	@Override
 	public String toString() {
-		return "Address[Country: " +this.country +" State: " +this.state +" City: " +this.city +" Zip Code: " +this.zipCode +"]";
+		return "Address[Country: " +this.country +" State: " +this.state +" City: " +this.city +" Zip Code: " +this.zipCode +" Street: " +this.street +" Number: " +this.number +" District: " +this.district +"]";
 	}
 
 	public String getCountry() {
@@ -62,5 +66,7 @@ public class Address {
 	public String getNumber() {
 		return number;
 	}
-
+	public String getDistrict() {
+		return district;
+	}
 }
