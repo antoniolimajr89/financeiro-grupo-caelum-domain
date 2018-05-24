@@ -46,9 +46,9 @@ public class Transaction {
 
 	@Override
 	public String toString() {
-		return "Payment[Date: " +this.date+" Customer: " +this.customer +"]";
+		return "Transaction [id=" + id + ", date=" + date + ", customer=" + customer + "]";
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
