@@ -82,11 +82,23 @@ public class Transaction {
 	}
 	
 	public BigDecimal getTotalAmount() {
-		return products.stream().map(Product::getTotalPrice).reduce(BigDecimal.ZERO, BigDecimal::add);
+		BigDecimal totalAmount = BigDecimal.ZERO;
+
+		for (Product p : this.products) {
+			totalAmount = totalAmount.add(p.getTotalPrice());
+		}
+
+		return totalAmount;
 	}
 	
 	public String getDescription() {
-		return products.stream().map(Product::getDescription).reduce(" ", String::concat);
+		String description = " ";
+
+		for (Product p : this.products) {
+			description.concat(p.getDescription());
+		}
+
+		return description;
 	}
 	
 }
