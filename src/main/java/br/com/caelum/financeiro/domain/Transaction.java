@@ -92,13 +92,13 @@ public class Transaction {
 	}
 	
 	public String getDescription() {
-		String description = " ";
+		StringBuilder description = new StringBuilder(" ");
 
 		for (Product p : this.products) {
-			description.concat(p.getDescription());
+			description.append(p.getDescription());
 		}
 
-		return description;
+		return description.toString();
 	}
 	
 }
